@@ -1,6 +1,6 @@
  -{_wLib_GZE}= VLiance/GZE/v1.0
  > 
- -L src_(Demo)/ -e src_(Demo)/MainEntry.cw -o obj/cw/ -#Obj=>{aCwObj} |
+  -L src_(Demo)/ -L src_(Demo)/ -e src_(Demo)/MainEntry.cw -o obj/cw/ -#Obj=>{aCwObj} |
  >
 -c {aCwObj} -o obj/cpp_{_sPlatform}_{_sOpt}/cwObj/ -I obj/cw/ -std=c++11
  >
