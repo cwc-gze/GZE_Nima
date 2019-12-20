@@ -17,7 +17,7 @@ package  {
 	import GZ.File.RcImg;
 	//import Demo.Screen.DemoRoll;
 	//import Demo.Screen.FpsCount;
-	import Demo.Screen.DemoText;
+	import Demo.Screen.DemoNima;
 	
 	import GZ.Gpu.ShaderModel.GzModel.GzShModel;
 	import GZ.Gpu.ShaderModel.GzModel.GzShModel_Minimal;
@@ -26,13 +26,7 @@ package  {
 	import GZ.Gpu.ShaderModel.GzModel.GzShModel_Shadertoy;
 	
 	
-	/*
-	import Demo.Screen.DemoPerspective;
-	import Demo.Screen.DemoSideScroller.DemoSideScroller;
-	import Demo.Screen.DemoText;
-	import Demo.Screen.DemoArrow;
-	*/
-	
+
  //	import Demo.Screen.DemoArrow;
 	
 	import GZ.Base.Math.Math;
@@ -44,14 +38,7 @@ package  {
 	import GZ.Base.Perspective;
 	import GZ.Gfx.Clip.Img;
 
-	/*
-	<cpp>
-		int oRcObj_Rc_GZ_RcEngine_Transform_png;
-	</cpp>
-	*/
-	/**
-	 * @author Maeiky
-	 */	
+
 	public thread<ThreadItf> MainInterface extends Interface {
 		
 		use Window.eWinClick;
@@ -78,12 +65,7 @@ package  {
 			//!New thread started, this and subclass are isolated for thread safety
 			//!Select rendering on GPU on CPU, default, true
 			
-			//Debug = new Debug();
-			//Lib_GZ::Sys::Debug::SetInst(oMain->thread) = Lib_GZ::Sys::Debug::Get(oMain->thread)->New(oMain.get()).get();
 	
-	
-			Debug.fTrace("!!!!!!!!!!!!!MainInterface!!!!");
-			
 			bGpuDraw = false;
 			bGpuDraw = true;
 			
@@ -94,11 +76,7 @@ package  {
 			
 			//Create a new windows
 			Interface(_oThreadItf, "GroundZero", 800, 600, _bTranparent, 0xFFFFFFFF);
-			//, eWinBorder.Normal, true, true, true, _bCpuGraphique);
-		
-			
-			
-			//fCreateInterface();
+
 			fCreateInterface(300,100);
 		}
 		
@@ -116,58 +94,9 @@ package  {
 		
 		override public function fWinStart():Void {
 			
-			
-
-			Debug.fPass(" ---- Interface C~ initialised ----");
-			//!The windows was created
-			//-------------------------------
-			//! Select your demo
-			var _nDemo : Int = 1;
-			//-------------------------------
-			
-			Debug.fTrace("---WinStart");
-			
-			
-			Debug.fTrace("---DemoRoll");
-			//oDemo = new DemoRoll(this);
-			//return;
-			
-			/*
-			var _oRc : RcImg = new  RcImg("Exe|Rc/Arrow.png");
-			//oImg =  new Img(this, 650.0, 0.0, "Exe|Rc/Arrow.png", true)
-			for(var i : Int = 0; i < nNbArrowInst; i++;){
-				oDemo = new DemoArrow(this,_oRc, nNbArrowInst-1, i );
-				oDemo.vRot.nRoll = i * 5;
-				aDemoArrow[i] = oDemo;
-			}
-			*/
-
-		oDemo = new DemoText(this);
+			oDemo = new DemoNima(this);
 					
-		//		Debug.fTrace1("---FpsCount");
-		//	oFps = new FpsCount(this, oItf.nFrameWidth - 150, 30);
-			
-		//	oDemo = new DemoText(this);
-			
-			/*
-			if(_nDemo == 1){
-				oDemo = new DemoRoll(this);
-			}else if(_nDemo == 2){
-				oDemo = new DemoPerspective(this);
-			}else if(_nDemo == 3){
-				oDemo = new DemoSideScroller(this);
-			}else if(_nDemo == 4){
-				oDemo = new DemoText(this);
-			}else if(_nDemo == 5){
-				oDemo = new DemoArrow(this);
-			
-			}*/
-			
-			//oPersv = new Perspective();
-			
-			//Debug.fTrace2(oPersv.mProj.v3.nZ);
-				
-			//	mTest.v3.nW = 21;
+		
 		}
 		
 		

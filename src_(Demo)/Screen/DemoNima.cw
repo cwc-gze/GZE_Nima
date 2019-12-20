@@ -28,7 +28,7 @@ package  {
 	/**
 	 * @author Maeiky
 	 */
-	public class DemoText extends Clip {
+	public class DemoNima extends Clip {
 
 		public var oImg : Img;
 		public var oLetter : Letter;
@@ -47,7 +47,7 @@ package  {
 		
 		
 		
-		public function DemoText( _oParent : Root ):Void {
+		public function DemoNima( _oParent : Root ):Void {
 			Clip(_oParent, _oParent.oItf.nHalfFrameWidth,  _oParent.oItf.nHalfFrameHeight);
 			
 			
