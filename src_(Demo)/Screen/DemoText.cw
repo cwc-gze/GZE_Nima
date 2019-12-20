@@ -22,6 +22,8 @@ package  {
 	import GZ.Base.Quaternion;
 	import GZ.Gpu.ShaderModel.AtModel.Attribute_Quad;
 	import GZ.Base.PtA;
+	
+	import GzNima.Runtime.NmActor;
 
 	/**
 	 * @author Maeiky
@@ -41,11 +43,17 @@ package  {
 		public var oVectorShape : VectorShape;
 		
 		public var oButton : ButtonImg;
+		public var oNmActor : NmActor;
 		
 		
 		
 		public function DemoText( _oParent : Root ):Void {
 			Clip(_oParent, _oParent.oItf.nHalfFrameWidth,  _oParent.oItf.nHalfFrameHeight);
+			
+			
+			
+			
+			
 			
 			
 			Debug.fTrace("----LoadFont ----");
@@ -55,6 +63,11 @@ package  {
 		//	var _oFont : RcFont = new RcFont("c:/extra_fonts/DroidSans.ttf");
 		
 	
+			
+			
+			oNmActor = new NmActor(this, 0, 0);
+				
+			
 			
 			
 			Debug.fTrace("--------");

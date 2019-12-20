@@ -9,6 +9,10 @@ import Demo.Test;
 
 
 	
+		<cpp>
+		#include "Lib_GzNima/Lib_GzNima.h"
+		</cpp>
+	
 	public class MainEntry extends EntryPoint {
 	
 		public var oTest: Test;
@@ -26,7 +30,12 @@ import Demo.Test;
 		
 		
 		public function MainEntry():Int {
-
+			
+			<cpp>
+			IniLib_Lib_GzNima();
+			</cpp>
+		
+		
 
 		//	dTest = fTestDelegate;
 			//C~ 
